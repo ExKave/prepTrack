@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+
+
+<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+
+<div class="wrapper hover_collapse">
+	<div class="top_navbar">
+		<div class="logo">JEE-MAINS</div>
+		<div class="menu">
+			<div class="hamburger">
+				<i class="fas fa-bars"></i>
+			</div>
+
+		</div>
+	</div>
+
+	<div class="sidebar">
+		<div class="sidebar_inner">
+		<ul>
+		  <li>
+		    <div class="top">
+		  	  <div class="icon"><i class="fa fa-user"></i></div><br>
+		  		<div class="text"><span class="user">User</span></div>
+		  	</div>
+		  </li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-qrcode"></i></span>
+					<span class="text">Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-eye"></i></span>
+					<span class="text">Overview</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<span class="icon"><i class="fa fa-question-circle"></i></span>
+					<span class="text">About</span>
+				</a>
+      </li>
+			<li>
+			  <a href="#">
+			    <div id="sign_in_out">
+			    <span class="icon"><i class="fas fa-sign-out-alt"></i></span>
+			    <span class="text">Sign Out</span>
+			    </div>
+			  </a>
+			</li>  
+		</ul>
+		</div>
+	</div>
+</div>
+
+<!--login form-->
+  <div class="fcontainer popup" id="mForm">
+    <div class="form-wrapper" id="formWrapper">
+     
+      <div class="form-container login cFront">
+         <div class="fclose" onclick="closeForm()">
+           <i class="fas fa-times"></i>
+         </div>
+        <h1>Login</h1>
+        <form id="login">
+          <input type="text" placeholder="Username" id="lname" required>
+          <input type="password" placeholder="Id" id="lid" required>
+          <button type="submit">Login</button>
+          <p>Forgot your password?</p>
+          <span class="toggle-button" onclick="toggleForm()">Sign Up</span>
+        </form>
+      </div>
+      <div class="form-container signup cBack">
+         <div class="fclose" onclick="closeForm()">
+           <i class="fas fa-times"></i>
+         </div>
+        <h1>Sign Up</h1>
+        <form id="signup">
+          <input type="text" placeholder="Username" required>
+          <input type="email" placeholder="Email" required>
+          <input type="password" placeholder="Id" required>
+          <button type="submit">Sign Up</button>
+          <p>Already have an account?</p>
+          <span class="toggle-button" onclick="toggleForm()">Login</span>
+        </form>
+      </div>
+    </div>
+  </div>
+
+<div class="welcome">
+Welcome <span class="user">User</span>
+</div>
+
+<div class="quote">
+  Loading..
+</div>
+
+<div class="chartbox">
+<canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+</div>
+
+<h3 style="text-align: right; margin-right: 30px;margin-top:20px; font-size: 16px; color: #333;" id="n_results">
+
+</h3>
+
+<div class="container" id="cards">
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script src="./script.js"></script>
+<script>
+  function toggleForm() {
+    const wrapper = document.getElementById('formWrapper');
+    wrapper.classList.toggle('flip');
+  }
+  
+</script>
+</body>
+</html>
