@@ -1,0 +1,397 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Paaji+2:wght@400;600&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	text-decoration: none;
+	list-style:none;
+}
+
+body{
+	background: #f5f5f5;
+	margin-top: 63px;
+}
+
+.top_navbar{
+  font-family: 'Baloo Paaji 2', cursive;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 60px;
+	background: #323233;
+	box-shadow: 1px 0 2px rgba(0,0,0,0.125);
+	display: flex;
+	align-items: center;
+	transition:0.5s;
+	z-index:40;
+}
+
+.top_navbar .logo{
+	width: 250px;
+	font-size: 25px;
+	font-weight: 700;
+	padding: 0 25px;
+	color: white;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	border-right: 1px solid #f5f5f5;
+}
+
+
+
+.top_navbar .menu{
+	width: calc(100% - 250px);
+	padding: 0 25px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.top_navbar .hamburger{
+	font-size: 25px;
+	cursor: pointer;
+	color: white;
+	position: absolute;
+	right:25px;
+}
+
+.top_navbar .hamburger:hover{
+	color: #007dc3;
+}
+
+/* Now I have determined what the sidebar will look like for a responsive device */
+.hover_collapse .sidebar{
+	width: 70px;
+}
+
+.hover_collapse .sidebar ul li a .text,.hover_collapse .sidebar ul li .top .text{
+display:none;
+}
+
+
+.sidebar{
+	position: fixed;
+	top: 60px;
+	left: 0;
+	width: 220px;
+	height: 100%;
+	background: #042331;
+	transition:0.5s;
+	z-index:30;
+}
+
+
+
+.sidebar ul li a,.top{
+	display: flex;
+	padding: 16px 25px;
+	border-bottom: 1px solid #03374e;
+	color: #0e94d4;
+}
+
+.sidebar ul li a .icon,.top .icon{
+	font-size: 18px;
+color: white;
+	vertical-align: middle;
+
+}
+
+.sidebar ul li a .text,.top .text{
+	margin-left: 19px;
+	color: #fff;
+font-family: sans-serif;
+font-size: 18px;
+	letter-spacing: 2px;
+}
+
+.sidebar ul li a:hover{
+	background: #0e94d4;
+	color: #fff;
+}
+
+.click_collapse .sidebar{
+
+}
+
+@media(max-width:1000px){
+.hover_collapse .sidebar{
+	width:0;
+}
+
+
+.hover_collapse .sidebar ul li a,.hover_collapse .sidebar ul li .top{
+
+
+display:none;
+}
+
+.top{
+display: grid;
+grid-template-columns: repeat(1);
+text-align:center;
+grid-row-gap:none;
+}
+
+.quote{
+  display:block;
+  margin-top:15px;
+  margin-left:10px;
+  margin-right:10px;
+  text-align:center;
+  font-family:cursive;
+  font-size:35px;
+  text-shadow: 5px 5px 7px red;
+  animation: fadeIn 3s ease-in-out;
+}
+
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.card .date{
+  margin:0;
+  display:block;
+  text-align:right;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    position:relative;
+    animation:slideUp 1s ease-in-out;
+}
+
+@keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+.card-section {
+    margin:0 0 10px 0;
+    padding: 7px;
+    border-bottom: 1px solid #ddd;
+}
+
+.card-section:last-of-type {
+    border-bottom: none;
+}
+
+.card-section h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #555;
+}
+
+.marks {
+    font-size: 20px;
+    color: #000;
+}
+
+/* Media Query for Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+}
+
+.chartbox{
+  display:flex;
+  justify-content:center;
+  margin-left:10px;
+}
+
+.welcome{
+  font-family: 'Arial', sans-serif;
+  font-size: 2em;
+  color: #4a90e2;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out;
+    }
+    
+    @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+.fcontainer{
+   position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     
+   position:fixed;
+    display:none;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    perspective: 1000px; /* Maintain perspective for 3D effect */
+    z-index:100;
+    background:#032330;
+}
+
+.fcontainer .fclose{
+   position: fixed;
+  top: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 20px;
+  z-index: 1000;
+}
+.form-wrapper {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s;
+    transform-origin: center; /* Ensure the flip happens around the center */
+}
+
+.form-wrapper.flip {
+    transform: rotateY(180deg);
+}
+
+.form-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background: #fff;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    justify-content: center; /* Center content vertically */
+}
+
+.form-container h1 {
+    margin-bottom: 1em;
+    color: whitesmoke;
+}
+
+.form-container input {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.form-container button {
+    background-color: #6e8efb;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 1em;
+}
+
+.form-container button:hover {
+    background-color: #5a6dcb;
+}
+
+.form-container p {
+    margin-top: 1em;
+    font-size: 14px;
+    color: #666;
+}
+
+.form-container .toggle-button {
+    margin-top: 1em;
+    font-size: 14px;
+    color: #666;
+    cursor: pointer;
+}
+
+.form-container.signup {
+    transform: rotateY(180deg);
+    transform-origin:center;
+}
+	
+	
+	.cFront , .cBack{
+		position:absolute;
+		height:400px;
+		width:250px;
+		background:rgba(255,255,255,0.1);
+		-webkit-backface-visibility: hidden;
+		backface-visibility:none;
+		border-radius:5px;
+		backdrop-filter:blur(5px);
+	}
+
+.popup{
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+  }
