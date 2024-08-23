@@ -513,11 +513,11 @@ font-size: 18px;
 
 }
 
-@media(max-width:1000px){
+@media(max-width:768px){
 .hover_collapse .sidebar{
 	width:0;
 }
-
+}
 
 .hover_collapse .sidebar ul li a,.hover_collapse .sidebar ul li .top{
 
