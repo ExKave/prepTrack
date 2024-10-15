@@ -1,6 +1,6 @@
 
-const API_KEY = 'AIzaSyAQZjD_TYcIM_S-1uNPz1W4puaTVgQqKew';
-const SHEET_ID = '1BfelK3bImxq1tRk-vFANDP_XLbiqH71dEnGhhDcNTTM';
+const API_KEY = '<your_api_key>';
+const SHEET_ID = '<sheet_id>';
 
 var uniqUsers=[];
 var id=window.localStorage.getItem("id");
